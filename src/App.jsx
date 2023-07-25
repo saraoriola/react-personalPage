@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/Header/header';
+import Home from './components/Home/home'
+import './app.css';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
-    <>
-      <div>
-        <h1>Bienvenidx a mi página personal</h1>
-      </div>
-    </>
-  )
-}
+    <div>
+      <Header/>
+      <Home/>
+    </div>
+  );
+};
 
-export default App
+export default App;
