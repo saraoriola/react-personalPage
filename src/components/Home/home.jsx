@@ -5,7 +5,7 @@ const name = "Sara Oriola";
 
 const Home = () => {
   return (
-    <section>
+    <div>
       <h2>Welcome to my personal page</h2>
       <p>Hello, I am {name}.</p>
       <p>Here you will find information about me, the technologies I handle, and my projects.</p>
@@ -42,7 +42,7 @@ const Home = () => {
           </tr>
         </tbody>
       </table>
-    </section>
+    </div>
   );
 };
 
