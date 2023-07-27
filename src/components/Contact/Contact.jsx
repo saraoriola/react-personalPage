@@ -27,12 +27,12 @@ const Contact = () => {
         setMessage(null);
         setBtnDisabled(false);
       }
-    } 
+    } else {
       setFormData({
         ...formData,
         [name]: value,
       });
-    
+    }
   };
 
   const clearForm = () => {
@@ -47,9 +47,9 @@ const Contact = () => {
       setMessage(errors);
       setBtnDisabled(true);
     } else {
-      console.log("Datos formulario", formData);
+      console.log("Form data", formData);
       clearForm();
-      setMessage("Formulario enviado con éxito");
+      setMessage("Form submitted successfully");
       setTimeout(() => {
         navigate("/");
       }, 3000);
@@ -99,7 +99,7 @@ const Contact = () => {
           className="form-input"
         />
         <button disabled={btnDisabled} type="submit" className="submit-button">
-          Enviar
+          Submit
         </button>
         {message && <p className="error-message">{message}</p>}
       </form>
