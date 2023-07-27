@@ -1,15 +1,31 @@
 import React from 'react';
-import Header from './components/Header/header';
-import Home from './components/Home/home'
-import './app.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import './App.css';
+
+import Header from './components/Header/Header';
+
+import Home from './components/Home/Home'
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import Blog from './components/Blog/Blog';
+import Contact from './components/Contact/Contact';
 
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <Home/>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 
