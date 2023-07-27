@@ -47,7 +47,6 @@ const Contact = () => {
       setMessage(errors);
       setBtnDisabled(true);
     } else {
-      console.log("Form data", formData);
       clearForm();
       setMessage("Form submitted successfully");
       setTimeout(() => {
