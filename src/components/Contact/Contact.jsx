@@ -55,6 +55,20 @@ const Contact = () => {
     }
   };
 
+  const saveUser = (e) => {
+    e.preventDefault();
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        password: formData.subject,
+        message: formData.message,
+        phone: formData.phone,
+      })
+    );
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -97,7 +111,7 @@ const Contact = () => {
           value={formData.phone}
           className="form-input"
         />
-        <button disabled={btnDisabled} type="submit" className="submit-button">
+        <button disabled={btnDisabled} type="submit" className="submit-button" onClick={saveUser}>
           Submit
         </button>
         {message && <p className="error-message">{message}</p>}
