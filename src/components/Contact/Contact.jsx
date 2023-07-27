@@ -27,12 +27,12 @@ const Contact = () => {
         setMessage(null);
         setBtnDisabled(false);
       }
-    } else {
+    } 
       setFormData({
         ...formData,
         [name]: value,
       });
-    }
+
   };
 
   const clearForm = () => {
