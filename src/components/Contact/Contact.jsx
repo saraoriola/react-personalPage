@@ -48,8 +48,9 @@ const Contact = () => {
       setBtnDisabled(true);
     } else {
       clearForm();
-      saveUser();
       setMessage("Form submitted successfully");
+      saveUser();
+      //console.log("hola") PREGUNTAR A SOFI, TENGO DUDAS
       setTimeout(() => {
         navigate("/");
       }, 3000);
